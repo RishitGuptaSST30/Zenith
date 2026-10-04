@@ -1,0 +1,249 @@
+.box {
+    height: auto;
+    min-height: 800px;
+    padding: 24px;
+}
+
+.deadline-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin: 40px 12px 10px;
+}
+
+.deadline-card {
+    --card-accent: #5e503f;
+    --card-soft: #e5ddd4;
+    position: relative;
+    padding: 24px;
+    color: #201c17;
+    background-color: #f5f0e9;
+    border: 1px solid rgba(32, 28, 23, 0.28);
+    border-left: 7px solid var(--card-accent);
+    border-radius: 10px;
+    box-shadow: 0 9px 18px rgba(20, 33, 61, 0.14);
+}
+
+/* Each section gets its own coffee shade. */
+#hackathons .deadline-card {
+    --card-accent: #8a5a38;
+    --card-soft: #ead7bd;
+}
+
+#events .deadline-card {
+    --card-accent: #6c4033;
+    --card-soft: #e1c7bc;
+}
+
+#assignments .deadline-card {
+    --card-accent: #5e504a;
+    --card-soft: #ddd4cf;
+}
+
+#examinations .deadline-card {
+    --card-accent: #815438;
+    --card-soft: #ead2b9;
+}
+
+.card-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.event-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.deadline-card h3 {
+    margin: 0;
+    color: #201c17;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.event-type {
+    padding: 5px 8px;
+    color: #f5f0e9;
+    background-color: var(--card-accent);
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.deadline-card .delete-event {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 7px 10px;
+    color: var(--card-accent);
+    background: transparent;
+    border: 1px solid var(--card-accent);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.deadline-card .delete-event:hover {
+    color: #f5f0e9;
+    background-color: #7b302b;
+    border-color: #7b302b;
+}
+
+.event-date-display {
+    margin: 14px 0 22px;
+    color: var(--card-accent);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.countdown-label {
+    margin: 0 0 7px;
+    color: #5e503f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 22px;
+    overflow: hidden;
+    background-color: var(--card-soft);
+    border: 1px solid rgba(32, 28, 23, 0.18);
+    border-radius: 8px;
+}
+
+.countdown-part {
+    min-width: 0;
+    padding: 13px 5px 11px;
+    text-align: center;
+}
+
+.countdown-part + .countdown-part {
+    border-left: 1px solid rgba(32, 28, 23, 0.18);
+}
+
+.countdown-part strong,
+.countdown-part span {
+    display: block;
+}
+
+.countdown-part strong {
+    color: #201c17;
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(20px, 2vw, 27px);
+    line-height: 1;
+}
+
+.countdown-part span {
+    margin-top: 5px;
+    color: #5e503f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.event-description {
+    margin: 0;
+    padding-top: 17px;
+    color: #3c332a;
+    border-top: 1px solid #d9cbc2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+}
+
+.event-description::before {
+    content: "Notes";
+    display: block;
+    margin-bottom: 5px;
+    color: var(--card-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.deadline-passed {
+    margin: 0 0 22px;
+    padding: 12px;
+    color: #f5f0e9;
+    background-color: #7b302b;
+    border-radius: 6px;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 15px;
+}
+
+.deadline-card.is-expired {
+    border-left-color: #7b302b;
+}
+
+.form-message {
+    min-height: 22px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.form-message-error {
+    color: #ffd0ca;
+}
+
+.form-message-success {
+    color: #d9f5d0;
+}
+
+@media (max-width: 700px) {
+    .deadline-cards {
+        grid-template-columns: 1fr;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .deadline-card {
+        padding: 19px;
+    }
+
+    .card-top-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .deadline-card .delete-event {
+        align-self: flex-start;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .countdown-part:nth-child(3) {
+        border-left: 0;
+    }
+
+    .countdown-part:nth-child(n + 3) {
+        border-top: 1px solid rgba(32, 28, 23, 0.18);
+    }
+}

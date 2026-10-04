@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Tracker</title>
+    <link rel="stylesheet" href="/ZenithMainstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Special+Gothic+Condensed+One&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <link rel="stylesheet" href="/deadline-cards.css">
+    <script src="/project.js" defer></script>
+
+    <div class="header">
+        <h1>-Zenith-</h1>
+        <!-- <h2>"Everything I need to show up for — and everything I want to."</h2> -->
+        <h2>COFFEE EDITION</h2>
+    </div>
+
+    <div class="grid-container">
+        <div class="info-guide">
+            <h4>FILTER BY CATEGORY</h4>
+            <br>
+            <ul>
+                <li>All Events</li>
+                <li>Hackathons</li>
+                <li>Submissions & Assignments</li>
+                <li>Examinations</li>
+                <li>Campus Events</li>
+            </ul>
+            <br>
+
+            <h4>COLOR CODE GUIDE</h4>
+            <br>
+            <ul type="square">
+                <li>Latte → Hackathons</li>
+                <li>Macchiato → Deadlines & Assignments</li>
+                <li>Americano → Examinations</li>
+                <li>Cortado → Campus Events</li>
+            </ul>
+            <br>
+
+            <h4>QUICK VALUE CHECK!</h4>
+            <br>
+            <ol>
+                <li>Work on Time</li>
+                <li>Dream big & Aim big</li>
+                <li>"Talent without hardwork is nothing" ~ CR7</li>
+                <li>A COFFEE a day, keeps sleep away!</li>
+                <li>Shubham daddy is my devta, you cutie!</li>
+            </ol>
+        </div>
+        <form>
+
+            <div class="form-card">
+                <label for="event-name" class="archivo-black-regular">Name</label>
+                <!-- <br> -->
+
+                <input type="text" id="event-name" placeholder="Enter the event Name...">
+                <br>
+                <br>
+
+                <label for="event-date" class="archivo-black-regular">Date</label>
+
+                <!-- <br> -->
+                <input type="date" id="event-date" min="2026-09-22">
+                <br>
+                <br>
+
+                <label for="picker" class="archivo-black-regular">Event Type</label>
+
+                <!-- <br> -->
+                <select name="picker" id="picker">
+                    <option value="" disabled selected hidden>Select here</option>
+                    <option value="Hackathons">SST Hackathons</option>
+                    <option value="Hackathons">External Hackathons</option>
+                    <option value="Events">SST Event</option>
+                    <option value="Events">External Events</option>
+                    <option value="Assignments">SST Assignments</option>
+                    <option value="Assignments">IIT-M Assignments</option>
+                    <option value="Examination">SST Examinations</option>
+                    <option value="Examination">IIT-M Examinations</option>
+                </select>
+                <br>
+                <br>
+                <label for="eventDescription" class="archivo-black-regular">Description</label>
+
+                <textarea id="eventDescription" rows="3" placeholder="Add notes, details, or comments..."></textarea>
+                <button type="submit">Add Event</button>
+            </div>
+        </form>
+    </div>
+    <div class="main-container">
+        <div class="box1 box" id="hackathons">
+            <h1 class="sectionheading archivo-black-regular">Hackathon Deadlines</h1>
+            <h2 class="sectionedition special-gothic-condensed-one-regular">- Latte Edition</h2>
+        </div>
+        <div class="box2 box" id="events">
+            <h1 class="sectionheading archivo-black-regular">Events Deadlines</h1>
+            <h2 class="sectionedition special-gothic-condensed-one-regular">- Macchiato Edition</h2>
+        </div>
+        <div class="box3 box" id="assignments">
+            <h1 class="sectionheading archivo-black-regular">Assignments Deadlines</h1>
+            <h2 class="sectionedition special-gothic-condensed-one-regular">- Americano Edition</h2>
+        </div>
+        <div class="box4 box" id="examinations">
+            <h1 class="sectionheading archivo-black-regular">Examination Deadlines</h1>
+            <h2 class="sectionedition special-gothic-condensed-one-regular">- Cortado Edition</h2>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="behindNav">
+
+
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#hackathons" class="Hackathonsbutton">Hackathon</a></li>
+                    <li><a href="#events" class="Eventsbuttonbutton">Event</a></li>
+                    <li><a href="#assignments" class="Assignmentsbutton">Assignment</a></li>
+                    <li><a href="#examinations" class="Examinationbutton">Examination</a></li>
+                    <li><a href="https://www.linkedin.com/in/rishit-gupta-094703222/" target="_blank">Connect me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+</body>
+
+</html>
